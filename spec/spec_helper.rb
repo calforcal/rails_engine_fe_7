@@ -11,6 +11,11 @@
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
 # it.
+
+require 'shoulda/matchers'
+require 'webmock/rspec'
+WebMock.disable_net_connect!
+
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
